@@ -61,8 +61,10 @@ export default function Navbar() {
                                         ? isMenu1Opened
                                             ? styles.opened
                                             : ''
-                                        : isMenu2Opened
-                                        ? styles.opened
+                                        : index === 2
+                                        ? isMenu2Opened
+                                            ? styles.opened
+                                            : ''
                                         : ''
                                 }`}
                                 onClick={() => {
