@@ -1,0 +1,44 @@
+:root {
+    --primary-light: #fdeae9;
+    --primary-light-hover: #fbdfde;
+    --primary-light-active: #f8bdbb;
+    --primary: #e72b24;
+    --primary-hover: #d02720;
+    --primary-active: #b9221d;
+    --primary-dark: #ad201b;
+    --primary-dark-hover: #8b1a16;
+    --primary-dark-active: #681310;
+    --primary-darker: #510f0d;
+
+    --secondary-light: #fff6e9;
+    --secondary-light-hover: #fff2de;
+    --secondary-light-active: #ffe4ba;
+    --secondary: #ffa820;
+    --secondary-hover: #e6971d;
+    --secondary-active: #cc861a;
+    --secondary-dark: #bf7e18;
+    --secondary-dark-hover: #996513;
+    --secondary-dark-active: #734c0e;
+    --secondary-darker: #593b0b;
+
+    --surface-white: #ffffff;
+    --surface-white-hover: #fcfdfd;
+    --surface-white-active: #f5f7f9;
+    --surface-light: #fcfdfd;
+    --surface-light-hover: #f5f7f933;
+    --surface-light-active: #f0f3f6;
+    --surface: #f9fafb;
+    --surface-hover: #f2f4f7;
+    --surface-active: #ebeef2;
+    --surface-dark: #f6f8f9;
+
+    --neutral-lighter: #f2f2f3;
+    --neutral-lighter-hover: #efeff0;
+    --neutral-lighter-active: #ececed;
+    --neutral: #e2e2e4;
+    --neutral-hover: #c0c0c2;
+    --neutral-active: #a5a5a6;
+    --neutral-dark: #4f4f50;
+    --neutral-dark-hover: #393939;
+    --neutral-dark-active: #191919;
+}

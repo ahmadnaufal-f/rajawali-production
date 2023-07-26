@@ -1,0 +1,17 @@
+.navbarLogoImage {
+    display: block;
+}
+
+.navbarLogoMobile {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .navbarLogoImage {
+        display: none;
+    }
+
+    .navbarLogoMobile {
+        display: block;
+    }
+}
