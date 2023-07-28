@@ -1,3 +1,5 @@
+import { Language, useLanguage } from '../../languages/language-context'
+
 export interface submenuItem {
     name: string;
     submenupath: string;
@@ -10,80 +12,66 @@ export interface menuItem {
     submenus: submenuItem[];
 }
 
-export const menuItems = [
+export function getMenuItems(lang: Language) {
+    const { getString } = useLanguage()
+    return ([
     {
         id: 'home',
-        name: 'About Us',
+        name: getString('about-us'),
         path: null,
-        submenus: [
-            // {
-            //     name: 'Who We Are',
-            //     submenupath: '/#who-we-are',
-            // },
-            // {
-            //     name: 'Product Overview',
-            //     submenupath: '/#product-overview',
-            // },
-            // {
-            //     name: 'Our Advantages',
-            //     submenupath: '/#our-advantages',
-            // },
-            // {
-            //     name: 'Testimonies',
-            //     submenupath: '/#testimonies',
-            // }
-        ]
+        submenus: []
     },
     {
         id: 'portfolio',
-        name: 'Our Portfolio',
+        name: getString('our-portfolio'),
         path: null,
         submenus: [
             {
-                name: 'Highlight Gallery',
+                name: getString('highlight-gallery'),
                 submenupath: '/portfolio/gallery',
             },
             {
-                name: 'Clients & Projects',
+                name: getString('clients-projects'),
                 submenupath: '/portfolio/projects',
             }
         ]
     },
     {
         id: 'product-services',
-        name: 'Product & Services',
+        name: getString('product-services'),
         path: null,
         submenus: [
             {
-                name: 'Rigging Aluminium Rental',
+                name: getString('rigging-aluminium-rental'),
                 submenupath: '/product-services/rigging-aluminium',
             },
             {
-                name: 'Stage Aluminium',
+                name: getString('stage-aluminium'),
                 submenupath: '/product-services/stage-aluminium',
             },
             {
-                name: 'Backdrop',
+                name: getString('backdrop'),
                 submenupath: '/product-services/backdrop',
             },
             {
-                name: 'Sound System',
+                name: getString('sound-system'),
                 submenupath: '/product-services/sound-system',
             },
             {
-                name: 'Lighting System',
-                submenupath: '/product-services/lighting-system',
+                name: getString('lighting'),
+                submenupath: '/product-services/lighting',
             },
             {
-                name: 'Event Equipments',
+                name: getString('event-equipments'),
                 submenupath: '/product-services/event-equipments',
             }
         ]
     },
     {
         id: 'contact',
-        name: 'Contact',
+        name: getString('contact'),
         path: '/contact',
         submenus: []
     }
-];
+])
+}

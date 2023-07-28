@@ -51,6 +51,7 @@
     margin-bottom: 0;
     list-style: none;
     gap: 1rem;
+    align-items: center;
 }
 
 @media screen and (max-width: 1080px) {
@@ -95,6 +96,15 @@
         font-weight: 700;
         background-color: var(--surface-light);
         box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.25) inset;
+        transition:
+            box-shadow 0.2s ease-in-out,
+            background-color 0.2s ease-in-out;
+    }
+
+    .navbarMenuItem:hover.active .navbarMenuItemLink,
+    .navbarMenuItem:focus.active .navbarMenuItemLink {
+        background-color: var(--primary-light-hover);
+        box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.5) inset;
     }
 
     .navbarMenuItem:hover .navbarMenuItemLink,
@@ -113,9 +123,28 @@
 .navbarMenuItemLang {
     display: block;
     border-radius: 50%;
-    width: 21px;
-    height: 21px;
-    outline: solid 1px var(--surface-light);
+    width: 22px;
+    height: 22px;
+    border: solid 1px var(--surface-light);
+    transform: translateY(0);
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    object-fit: cover;
+    object-position: 50% 50%;
+    outline-width: 0px;
+    transition: outline 0.2s ease;
+}
+
+.navbarMenuItemLang.activeLang {
+    outline: solid 2px var(--secondary-hover);
+    outline-offset: 2px;
+}
+
+@media screen and (min-width: 961px) {
+    .navbarMenuItemLang:hover,
+    .navbarMenuItemLang:focus {
+        transform: translateY(-2px);
+    }
 }
 
 .navbarMenuItemLangSeparator {
@@ -137,7 +166,6 @@
         opacity: 0;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
         width: fit-content;
         margin-block-start: 40px;
         transform: translateY(-0.5rem);
