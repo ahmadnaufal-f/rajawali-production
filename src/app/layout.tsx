@@ -4,6 +4,7 @@ import './component/hamburger/hamburger.css'
 import type { Metadata } from 'next'
 import { Anybody, Hanken_Grotesk } from 'next/font/google'
 import Navbar from './container/navbar/navbar'
+import Footer from './container/footer/footer'
 import { LanguageProvider } from './languages/language-context'
 
 import { config } from '@fortawesome/fontawesome-svg-core'
@@ -21,10 +22,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-            <body className={anybody.className}>
+            <body className={hankenGrotesk.className}>
                 <LanguageProvider>
                     <Navbar />
                     {children}
+                    <Footer />
                 </LanguageProvider>
             </body>
         </html>

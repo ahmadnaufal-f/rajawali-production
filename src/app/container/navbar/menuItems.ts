@@ -43,27 +43,27 @@ export function getMenuItems(lang: Language) {
         submenus: [
             {
                 name: getString('rigging-aluminium-rental'),
-                submenupath: '/product-services/rigging-aluminium',
+                submenupath: '/product-services/#rigging-aluminium',
             },
             {
                 name: getString('stage-aluminium'),
-                submenupath: '/product-services/stage-aluminium',
+                submenupath: '/product-services/#stage-aluminium',
             },
             {
                 name: getString('backdrop'),
-                submenupath: '/product-services/backdrop',
+                submenupath: '/product-services/#backdrop',
             },
             {
                 name: getString('sound-system'),
-                submenupath: '/product-services/sound-system',
+                submenupath: '/product-services/#sound-system',
             },
             {
                 name: getString('lighting'),
-                submenupath: '/product-services/lighting',
+                submenupath: '/product-services/#lighting',
             },
             {
                 name: getString('event-equipments'),
-                submenupath: '/product-services/event-equipments',
+                submenupath: '/product-services/#event-equipments',
             }
         ]
     },
