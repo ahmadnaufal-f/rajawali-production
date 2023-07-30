@@ -25,7 +25,7 @@ export default function Hero() {
                     <CtaButton />
                 </motion.div>
                 <Image
-                    src="/photos/hero_img.png"
+                    src="/photos/hero_img.webp"
                     alt="Rajawali Production Indonesia"
                     width={1920}
                     height={700}

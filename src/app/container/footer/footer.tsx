@@ -4,6 +4,7 @@ import { useLanguage } from '../../languages/language-context'
 import styles from './footer.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import ScrollLink from '../../component/scroll-link/scroll-link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faInstagram, faLinkedin, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
@@ -41,51 +42,51 @@ export default function Footer() {
                 <div className={styles.footerNavigatorLinkContainer}>
                     <div className={styles.footerNavigatorGroup}>
                         <div className={styles.footerNavigatorSubgroup}>
-                            <Link href="/#who-we-are" className={styles.footerNavigatorLink}>
+                            <ScrollLink href="/#who-we-are" className={styles.footerNavigatorLink}>
                                 {getString('who-we-are')}
-                            </Link>
-                            <Link href="/#product-overview" className={styles.footerNavigatorLink}>
+                            </ScrollLink>
+                            <ScrollLink href="/#product-overview" className={styles.footerNavigatorLink}>
                                 {getString('product-overview')}
-                            </Link>
-                            <Link href="/#our-advantages" className={styles.footerNavigatorLink}>
+                            </ScrollLink>
+                            <ScrollLink href="/#our-advantages" className={styles.footerNavigatorLink}>
                                 {getString('our-advantages')}
-                            </Link>
-                            <Link href="/#testimonies" className={styles.footerNavigatorLink}>
+                            </ScrollLink>
+                            <ScrollLink href="/#testimonies" className={styles.footerNavigatorLink}>
                                 {getString('testimonies')}
-                            </Link>
+                            </ScrollLink>
                         </div>
                         <div className={styles.footerNavigatorSubgroup}>
-                            <Link href="/portfolio/gallery" className={styles.footerNavigatorLink}>
+                            <ScrollLink href="/portfolio/gallery" className={styles.footerNavigatorLink}>
                                 {getString('highlight-gallery')}
-                            </Link>
-                            <Link href="/portfolio/projects" className={styles.footerNavigatorLink}>
+                            </ScrollLink>
+                            <ScrollLink href="/portfolio/projects" className={styles.footerNavigatorLink}>
                                 {getString('clients-projects')}
-                            </Link>
-                            <Link href="/contact/" className={styles.footerNavigatorLink}>
+                            </ScrollLink>
+                            <ScrollLink href="/contact/" className={styles.footerNavigatorLink}>
                                 {getString('contact-form')}
-                            </Link>
+                            </ScrollLink>
                         </div>
                     </div>
                     <div className={styles.footerNavigatorGroup}>
                         <div className={styles.footerNavigatorSubgroup}>
-                            <Link href="/product-services/#rigging-aluminium" className={styles.footerNavigatorLink}>
+                            <ScrollLink href="/product-services/#rigging-aluminium" className={styles.footerNavigatorLink}>
                                 {getString('rigging-aluminium-rental')}
-                            </Link>
-                            <Link href="/product-services/#stage-aluminium" className={styles.footerNavigatorLink}>
+                            </ScrollLink>
+                            <ScrollLink href="/product-services/#stage-aluminium" className={styles.footerNavigatorLink}>
                                 {getString('stage-aluminium')}
-                            </Link>
-                            <Link href="/product-services/#backdrop" className={styles.footerNavigatorLink}>
+                            </ScrollLink>
+                            <ScrollLink href="/product-services/#backdrop" className={styles.footerNavigatorLink}>
                                 {getString('backdrop')}
-                            </Link>
-                            <Link href="/product-services/#sound-system" className={styles.footerNavigatorLink}>
+                            </ScrollLink>
+                            <ScrollLink href="/product-services/#sound-system" className={styles.footerNavigatorLink}>
                                 {getString('sound-system')}
-                            </Link>
-                            <Link href="/product-services/#lighting" className={styles.footerNavigatorLink}>
+                            </ScrollLink>
+                            <ScrollLink href="/product-services/#lighting" className={styles.footerNavigatorLink}>
                                 {getString('lighting')}
-                            </Link>
-                            <Link href="/product-services/#event-equipments" className={styles.footerNavigatorLink}>
+                            </ScrollLink>
+                            <ScrollLink href="/product-services/#event-equipments" className={styles.footerNavigatorLink}>
                                 {getString('event-equipments')}
-                            </Link>
+                            </ScrollLink>
                         </div>
                     </div>
                 </div>

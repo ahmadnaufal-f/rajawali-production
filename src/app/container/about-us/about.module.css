@@ -1,0 +1,153 @@
+.section {
+    width: 100%;
+    padding: 3.75rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.section.gray {
+    background-color: var(--neutral-lighter-hover);
+}
+
+.aboutUsTitle {
+    margin: 0 auto 0.75rem;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-weight: 700;
+}
+
+.aboutUsSubtitle {
+    margin: 0 auto 0.75rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color: #101828;
+    font-weight: 700;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .aboutUsSubtitle {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
+.aboutUsDescription {
+    margin: 0 auto;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: var(--neutral-dark);
+    font-weight: 500;
+    text-align: center;
+}
+
+.numbersContainer {
+    display: grid;
+    padding: 0 7.5vw;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+}
+
+/* .numbersPics {
+    width: 100%;
+    height: 562px;
+    display: grid;
+    place-items: center;
+    min-height: 562px;
+}
+
+.numbersPics img {
+    width: 100%;
+    height: 562px;
+    height: auto;
+    object-fit: contain;
+} */
+
+.numbersPics {
+    width: auto;
+    height: 562px;
+    display: grid;
+    place-items: center;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.numbersPics img {
+    min-width: 0;
+    width: auto;
+    height: 562px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.numbersText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.numbersTitle {
+    font-size: 3.125rem;
+    color: var(--primary-dark);
+    font-weight: 700;
+    margin-block-end: 1rem;
+}
+
+.numbersSubtitle {
+    margin-block-end: 3rem;
+    font-size: 1.5rem;
+    color: var(--neutral-dark-hover);
+    font-weight: 500;
+}
+
+.numbersGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    place-items: center start;
+}
+
+@media (max-width: 768px) {
+    .numbersContainer {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+
+    .numbersPics {
+        height: 300px;
+    }
+
+    .numbersPics img {
+        height: 300px;
+        object-position: center;
+    }
+
+    .numbersGrid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-rows: repeat(4, 1fr);
+        place-items: center;
+    }
+
+    .numbersGrid > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .numbersTitle {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .numbersSubtitle {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}

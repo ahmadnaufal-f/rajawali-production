@@ -19,7 +19,7 @@ export function getMenuItems(lang: Language) {
         {
             id: 'home',
             name: getString('about-us'),
-            path: null,
+            path: '/#who-we-are',
             submenus: []
         },
         {

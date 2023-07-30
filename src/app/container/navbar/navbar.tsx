@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import styles from './navbar.module.css'
-import Image from 'next/image'
+import ScrollLink from '../../component/scroll-link/scroll-link'
 import { usePathname } from 'next/navigation'
 import React, { useState, useEffect } from 'react'
 import { getMenuItems, menuItem, submenuItem } from './menuItems'
@@ -64,9 +64,9 @@ export default function Navbar() {
                                 }}
                             >
                                 {item.path !== null ? (
-                                    <Link href={item.path}>
+                                    <ScrollLink href={item.path}>
                                         <div className={styles.navbarMenuItemLink}>{item.name}</div>
-                                    </Link>
+                                    </ScrollLink>
                                 ) : (
                                     <div className={styles.navbarMenuItemLink}>
                                         {`${item.name}  `}
@@ -77,9 +77,9 @@ export default function Navbar() {
                                     <div className={styles.navbarSubmenusContainer}>
                                         {item.submenus.map((submenu: submenuItem, index: number, array: submenuItem[]) => (
                                             <div key={index} className={styles.navbarSubmenusItem}>
-                                                <Link href={submenu.submenupath} className={styles.navbarSubmenusLink}>
+                                                <ScrollLink href={submenu.submenupath} className={styles.navbarSubmenusLink}>
                                                     <div>{submenu.name}</div>
-                                                </Link>
+                                                </ScrollLink>
                                                 {/* {index !== array.length - 1 && <div className={styles.navbarSubmenusSeparator}></div>} */}
                                             </div>
                                         ))}

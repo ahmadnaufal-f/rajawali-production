@@ -1,0 +1,22 @@
+.counterNumber {
+    font-size: 4rem;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.counterText {
+    font-size: 18px;
+    color: var(--neutral-dark-active);
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .counterNumber {
+        font-size: 2.5rem;
+        margin-block-end: 0.5rem;
+    }
+
+    .counterText {
+        font-size: 0.9rem;
+    }
+}
