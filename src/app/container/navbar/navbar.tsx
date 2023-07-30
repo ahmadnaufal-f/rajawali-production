@@ -80,7 +80,7 @@ export default function Navbar() {
                                                 <Link href={submenu.submenupath} className={styles.navbarSubmenusLink}>
                                                     <div>{submenu.name}</div>
                                                 </Link>
-                                                {index !== array.length - 1 && <div className={styles.navbarSubmenusSeparator}></div>}
+                                                {/* {index !== array.length - 1 && <div className={styles.navbarSubmenusSeparator}></div>} */}
                                             </div>
                                         ))}
                                     </div>

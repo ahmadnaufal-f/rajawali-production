@@ -1,0 +1,133 @@
+.section {
+    width: 100vw;
+}
+
+.heroContainer {
+    width: 100%;
+    height: calc(768px - 73px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroImage {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.heroClip {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.heroClip > svg {
+    fill: var(--surface);
+}
+
+.heroOverlayRed {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(231, 43, 36, 0.9) 0%, rgba(231, 43, 36, 0) 100%);
+}
+
+.heroOverlayBlack {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, #4e0300 0%, rgba(78, 3, 0, 0) 100%);
+}
+
+.heroTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding-inline-start: 7.5vw;
+    color: var(--surface-white);
+}
+
+.heroTitle {
+    max-width: 500px;
+    font-size: 4.75rem;
+    margin-block-end: 1.5rem;
+}
+
+.heroSubtitle {
+    font-size: 2rem;
+    margin-block-end: 3rem;
+}
+
+@media (max-width: 960px) {
+    .heroContainer {
+        height: calc(1013px - 104px);
+    }
+
+    .heroOverlayRed {
+        background: linear-gradient(180deg, rgba(231, 43, 36, 0.9) 0%, rgba(231, 43, 36, 0) 100%);
+    }
+
+    .heroOverlayBlack {
+        background: linear-gradient(180deg, #4e0300 0%, rgba(78, 3, 0, 0) 100%);
+    }
+
+    .heroTextContainer {
+        padding-inline-start: 0px;
+        padding-block-start: 8rem;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .heroTitle {
+        text-align: center;
+        max-width: 450px;
+    }
+
+    .heroSubtitle {
+        font-weight: 500;
+        max-width: 450px;
+        text-align: center;
+        margin-block-end: 5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heroContainer {
+        height: 400px;
+    }
+
+    .heroTextContainer {
+        padding-block-start: 2.5rem;
+    }
+
+    .heroTitle {
+        text-align: center;
+        font-size: 2.25rem;
+        font-weight: 700px;
+        max-width: 225px;
+        margin-block-end: 0.5rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1rem;
+        max-width: 235px;
+        text-align: center;
+        margin-block-end: 2.5rem;
+    }
+}

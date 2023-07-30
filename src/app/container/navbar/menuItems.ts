@@ -13,65 +13,66 @@ export interface menuItem {
 }
 
 export function getMenuItems(lang: Language) {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const { getString } = useLanguage()
     return ([
-    {
-        id: 'home',
-        name: getString('about-us'),
-        path: null,
-        submenus: []
-    },
-    {
-        id: 'portfolio',
-        name: getString('our-portfolio'),
-        path: null,
-        submenus: [
-            {
-                name: getString('highlight-gallery'),
-                submenupath: '/portfolio/gallery',
-            },
-            {
-                name: getString('clients-projects'),
-                submenupath: '/portfolio/projects',
-            }
-        ]
-    },
-    {
-        id: 'product-services',
-        name: getString('product-services'),
-        path: null,
-        submenus: [
-            {
-                name: getString('rigging-aluminium-rental'),
-                submenupath: '/product-services/#rigging-aluminium',
-            },
-            {
-                name: getString('stage-aluminium'),
-                submenupath: '/product-services/#stage-aluminium',
-            },
-            {
-                name: getString('backdrop'),
-                submenupath: '/product-services/#backdrop',
-            },
-            {
-                name: getString('sound-system'),
-                submenupath: '/product-services/#sound-system',
-            },
-            {
-                name: getString('lighting'),
-                submenupath: '/product-services/#lighting',
-            },
-            {
-                name: getString('event-equipments'),
-                submenupath: '/product-services/#event-equipments',
-            }
-        ]
-    },
-    {
-        id: 'contact',
-        name: getString('contact'),
-        path: '/contact',
-        submenus: []
-    }
-])
+        {
+            id: 'home',
+            name: getString('about-us'),
+            path: null,
+            submenus: []
+        },
+        {
+            id: 'portfolio',
+            name: getString('our-portfolio'),
+            path: null,
+            submenus: [
+                {
+                    name: getString('highlight-gallery'),
+                    submenupath: '/portfolio/gallery',
+                },
+                {
+                    name: getString('clients-projects'),
+                    submenupath: '/portfolio/projects',
+                }
+            ]
+        },
+        {
+            id: 'product-services',
+            name: getString('product-services'),
+            path: null,
+            submenus: [
+                {
+                    name: getString('rigging-aluminium-rental'),
+                    submenupath: '/product-services/#rigging-aluminium',
+                },
+                {
+                    name: getString('stage-aluminium'),
+                    submenupath: '/product-services/#stage-aluminium',
+                },
+                {
+                    name: getString('backdrop'),
+                    submenupath: '/product-services/#backdrop',
+                },
+                {
+                    name: getString('sound-system'),
+                    submenupath: '/product-services/#sound-system',
+                },
+                {
+                    name: getString('lighting'),
+                    submenupath: '/product-services/#lighting',
+                },
+                {
+                    name: getString('event-equipments'),
+                    submenupath: '/product-services/#event-equipments',
+                }
+            ]
+        },
+        {
+            id: 'contact',
+            name: getString('contact'),
+            path: '/contact',
+            submenus: []
+        }
+    ])
 }

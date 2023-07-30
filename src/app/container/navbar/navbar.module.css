@@ -1,12 +1,16 @@
 .navbar {
-    background-color: #b9221d;
+    background-color: var(--primary-active);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     width: 100%;
     height: 73px;
     padding: 0 70px;
-    box-shadow: 0px 2px 30px 5px rgba(230, 151, 29, 0.4);
-    position: fixed;
+    box-shadow:
+        2.7px 3.4px 4.2px rgba(0, 0, 0, 0.081),
+        9.2px 11.4px 14.1px rgba(0, 0, 0, 0.119),
+        41px 51px 63px rgba(0, 0, 0, 0.2);
+    position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 @media screen and (max-width: 1080px) {
@@ -21,6 +25,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
 }
 
 .navbarLogo {
@@ -29,6 +34,7 @@
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
+    height: 100%;
 }
 
 .navbarLogo:hover,
@@ -107,9 +113,19 @@
         box-shadow: 0px -2px 4px 0px rgba(0, 0, 0, 0.5) inset;
     }
 
+    .navbarMenuItem:hover .navbarMenuItemLink > svg,
+    .navbarMenuItem:focus .navbarMenuItemLink > svg {
+        transform: translateY(2px);
+    }
+
     .navbarMenuItem:hover .navbarMenuItemLink,
     .navbarMenuItem:focus .navbarMenuItemLink {
         background-color: var(--surface-light-hover);
+    }
+
+    .navbarMenuItemLink > svg {
+        transform: translateY(0);
+        transition: transform 0.2s ease-in-out;
     }
 }
 
@@ -141,6 +157,10 @@
 }
 
 @media screen and (min-width: 961px) {
+    .navbarMenuItemLang {
+        transform: translateY(0);
+        transition: transform 0.2s ease;
+    }
     .navbarMenuItemLang:hover,
     .navbarMenuItemLang:focus {
         transform: translateY(-2px);
