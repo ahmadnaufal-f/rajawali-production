@@ -1,24 +1,15 @@
-import { useState } from 'react'
-
 type Props = {
+    isCollapsed: boolean
     setCollapsed: (isCollapsed: boolean) => void
 }
 
-export default function Hamburger({ setCollapsed }: Props) {
-    const [isActive, setIsActive] = useState(false)
+export default function Hamburger({ isCollapsed, setCollapsed }: Props) {
     const onClickButton = () => {
-        setIsActive(!isActive)
-        setCollapsed(!isActive)
+        setCollapsed(!isCollapsed)
     }
 
     return (
-        <button
-            className={`hamburger hamburger--spin ${
-                isActive ? 'is-active' : ''
-            }`}
-            type="button"
-            onClick={onClickButton}
-        >
+        <button className={`hamburger hamburger--spin ${isCollapsed ? 'is-active' : ''}`} type="button" onClick={onClickButton}>
             <span className="hamburger-box">
                 <span className="hamburger-inner"></span>
             </span>

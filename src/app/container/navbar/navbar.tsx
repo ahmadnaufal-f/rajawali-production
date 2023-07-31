@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import styles from './navbar.module.css'
 import ScrollLink from '../../component/scroll-link/scroll-link'
 import { usePathname } from 'next/navigation'
@@ -41,6 +40,33 @@ export default function Navbar() {
 
     const menuItems = getMenuItems(language)
 
+    // add on click event to the document to close the menu when clicking outside of it
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            const target = event.target as HTMLElement
+            if (target.closest(`.${styles.navbarMenu}`) === null && isCollapsed) {
+                setIsCollapsed(false)
+            }
+        }
+        document.addEventListener('click', handleClickOutside)
+        return () => {
+            document.removeEventListener('click', handleClickOutside)
+        }
+    }, [isCollapsed])
+
+    // add on scroll event to the document to close the menu when scrolling
+    useEffect(() => {
+        const handleScroll = () => {
+            if (isCollapsed) {
+                setIsCollapsed(false)
+            }
+        }
+        document.addEventListener('scroll', handleScroll)
+        return () => {
+            document.removeEventListener('scroll', handleScroll)
+        }
+    }, [isCollapsed])
+
     return (
         <nav className={styles.navbar}>
             <div className={styles.navbarContainer}>
@@ -64,7 +90,7 @@ export default function Navbar() {
                                 }}
                             >
                                 {item.path !== null ? (
-                                    <ScrollLink href={item.path}>
+                                    <ScrollLink setIsCollapsed={setCollapsed} href={item.path}>
                                         <div className={styles.navbarMenuItemLink}>{item.name}</div>
                                     </ScrollLink>
                                 ) : (
@@ -77,7 +103,11 @@ export default function Navbar() {
                                     <div className={styles.navbarSubmenusContainer}>
                                         {item.submenus.map((submenu: submenuItem, index: number, array: submenuItem[]) => (
                                             <div key={index} className={styles.navbarSubmenusItem}>
-                                                <ScrollLink href={submenu.submenupath} className={styles.navbarSubmenusLink}>
+                                                <ScrollLink
+                                                    setIsCollapsed={setCollapsed}
+                                                    href={submenu.submenupath}
+                                                    className={styles.navbarSubmenusLink}
+                                                >
                                                     <div>{submenu.name}</div>
                                                 </ScrollLink>
                                                 {/* {index !== array.length - 1 && <div className={styles.navbarSubmenusSeparator}></div>} */}
@@ -93,7 +123,7 @@ export default function Navbar() {
                     </ul>
                 </div>
                 <div className={styles.navbarHamburger}>
-                    <Hamburger setCollapsed={setCollapsed} />
+                    <Hamburger isCollapsed={isCollapsed} setCollapsed={setCollapsed} />
                 </div>
             </div>
         </nav>
