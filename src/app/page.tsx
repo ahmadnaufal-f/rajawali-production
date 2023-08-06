@@ -1,5 +1,8 @@
 import AboutUs from './container/about-us/about-us'
+import Advantages from './container/advantages/advantages'
 import Hero from './container/hero/hero'
+import Partners from './container/partners/partners'
+import ProductOverview from './container/product-overview/product-overview'
 import styles from './page.module.css'
 
 export default function Home() {
@@ -7,6 +10,9 @@ export default function Home() {
         <main className={styles.main}>
             <Hero />
             <AboutUs />
+            <Partners />
+            <ProductOverview />
+            <Advantages />
         </main>
     )
 }

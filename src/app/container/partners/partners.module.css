@@ -1,0 +1,78 @@
+.partnersContainer {
+    display: block;
+    width: 100%;
+    padding: 60px 72px;
+    background-color: var(--surface);
+    overflow: hidden;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .partnersContainer {
+        padding: 30px 24px;
+    }
+}
+
+.partnersCaption {
+    text-align: center;
+    margin-block-end: 2rem;
+    font-size: 20px;
+}
+
+@media (max-width: 960px) {
+    .partnersCaption {
+        font-size: 1rem;
+    }
+}
+
+.swiperWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--surface) 5%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, var(--surface) 95%);
+    z-index: 100;
+}
+
+@media (min-width: 1224px) {
+    .swiperWrapper {
+        justify-content: center;
+    }
+    .overlay {
+        display: none;
+    }
+}
+
+.swiperWrapper > div {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+}
+
+.logoContainer {
+    width: fit-content;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.logoContainer > img {
+    max-width: 240px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+@media (max-width: 960px) {
+    .logoContainer > img {
+        max-width: 160px;
+        max-height: 70px;
+    }
+}

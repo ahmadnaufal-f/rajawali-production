@@ -9,7 +9,7 @@ export default function CtaButton() {
     const { getString } = useLanguage()
     return (
         <Link href="/contact">
-            <motion.div className={styles.button} whileHover={{ scale: 1.1 }} transition={{ type: 'spring', stiffness: 400, damping: 10 }}>
+            <motion.div className={styles.button} whileHover={{ scale: 1.1 }}>
                 <span className={styles.buttonText}>{getString('contact-us')}</span>
             </motion.div>
         </Link>

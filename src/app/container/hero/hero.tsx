@@ -31,6 +31,8 @@ export default function Hero() {
                     height={700}
                     quality={100}
                     className={styles.heroImage}
+                    placeholder="blur"
+                    blurDataURL="LOLVR7IWFts:}=f6o|oeGYbHw1kC"
                 />
                 <div className={styles.heroOverlayRed}></div>
                 <div className={styles.heroOverlayBlack}></div>

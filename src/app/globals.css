@@ -21,6 +21,7 @@ body {
     -ms-overflow-style: none; /* Internet Explorer 10+ */
     scrollbar-width: none; /* Firefox */
     background-color: var(--surface);
+    overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {

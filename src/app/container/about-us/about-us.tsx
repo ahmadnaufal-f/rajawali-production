@@ -1,14 +1,10 @@
 'use client'
 
 import { useLanguage } from '../../languages/language-context'
-import { Anybody } from 'next/font/google'
-import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
 import Counter from '../../component/counter/counter'
 import styles from './about.module.css'
 import Image from 'next/image'
-
-const anybody = Anybody({ subsets: ['latin'] })
+import Chapter from '../../component/chapter/chapter'
 
 export default function AboutUs() {
     const { getString } = useLanguage()
@@ -32,23 +28,17 @@ export default function AboutUs() {
         },
     ]
 
+    const title = getString('about-us')
+    const subtitle = getString('who-we-are')
+    const description = getString('about-us-subtitle')
+
     return (
         <>
-            <motion.div
-                className={styles.section}
-                initial={{ opacity: 0, x: -16 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ ease: 'easeInOut', staggerChildren: 0.2 }}
-                id="who-we-are"
-            >
-                <div className={styles.aboutUsTitle}>{getString('about-us')}</div>
-                <div className={`${styles.aboutUsSubtitle} ${anybody.className}`}>{getString('who-we-are')}</div>
-                <div className={styles.aboutUsDescription}>{getString('about-us-subtitle')}</div>
-            </motion.div>
+            <Chapter title={title} subtitle={subtitle} description={description} id={'who-we-are'} />
             <div className={`${styles.section} ${styles.gray}`}>
                 <div className={styles.numbersContainer}>
                     <div className={styles.numbersPics}>
-                        <Image src="/photos/about_img.webp" alt="rigging stage" width={540} height={540} />
+                        <Image src="/photos/about_img2.webp" alt="rigging stage" width={540} height={540} />
                     </div>
                     <div className={styles.numbersText}>
                         <div className={styles.numbersTitle}>{getString('trust-in-our')}</div>
