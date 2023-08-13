@@ -5,6 +5,7 @@ import Counter from '../../component/counter/counter'
 import styles from './about.module.css'
 import Image from 'next/image'
 import Chapter from '../../component/chapter/chapter'
+import { motion } from 'framer-motion'
 
 export default function AboutUs() {
     const { getString } = useLanguage()
@@ -37,11 +38,20 @@ export default function AboutUs() {
             <Chapter title={title} subtitle={subtitle} description={description} id={'who-we-are'} />
             <div className={`${styles.section} ${styles.gray}`}>
                 <div className={styles.numbersContainer}>
-                    <div className={styles.numbersPics}>
-                        <Image src="/photos/about_img2.webp" alt="rigging stage" width={540} height={540} />
-                    </div>
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ ease: 'easeInOut' }}
+                        className={styles.numbersPics}
+                    >
+                        <Image src="/photos/about_img2.webp" alt="rigging stage" layout="fill" objectFit="cover" objectPosition="center" />
+                    </motion.div>
                     <div className={styles.numbersText}>
-                        <div className={styles.numbersTitle}>{getString('trust-in-our')}</div>
+                        <div className={styles.numbersTitle}>
+                            {getString('trust-in-our')}
+                            <span className={styles.numbersTitleHighlight}>{getString('certified-rigging-services')}</span>
+                            {getString('for-a-seamless-event-exp')}
+                        </div>
                         <div className={styles.numbersSubtitle}>{getString('for-over-a-decade')}</div>
                         <div className={styles.numbersGrid}>
                             {items.map((item, index) => (

@@ -60,8 +60,8 @@
 }
 
 .cardDescription {
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 0.9rem;
+    font-weight: 500;
     display: -webkit-box;
     -webkit-line-clamp: 2; /* number of lines to show */
     line-clamp: 2;
@@ -71,8 +71,8 @@
 
 .cardButton {
     padding-block-end: 0.5rem;
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 0.9rem;
+    font-weight: 700;
     text-decoration: none;
     position: relative;
     display: block;

@@ -3,6 +3,7 @@ import Advantages from './container/advantages/advantages'
 import Hero from './container/hero/hero'
 import Partners from './container/partners/partners'
 import ProductOverview from './container/product-overview/product-overview'
+import Testimonies from './container/testimonies/testimonies'
 import styles from './page.module.css'
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
             <Partners />
             <ProductOverview />
             <Advantages />
+            <Testimonies />
         </main>
     )
 }

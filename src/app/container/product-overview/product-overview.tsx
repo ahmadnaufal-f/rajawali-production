@@ -15,7 +15,7 @@ export default function ProductOverview() {
     const menuItems = getMenuItems(language).find((item) => item.id === 'product-services')?.submenus
     const cardItems = menuItems?.map((item) => ({
         title: item.name,
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nisi eget nunc ultricies aliquam.',
+        description: getString(`${item.id}-desc`),
         imageSrc: `/products/${item.id}.webp`,
         imageAlt: item.id.replaceAll('-', ' '),
         link: item.submenupath,
