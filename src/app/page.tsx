@@ -1,5 +1,6 @@
 import AboutUs from './container/about-us/about-us'
 import Advantages from './container/advantages/advantages'
+import Cta from './container/cta/cta'
 import Hero from './container/hero/hero'
 import Partners from './container/partners/partners'
 import ProductOverview from './container/product-overview/product-overview'
@@ -15,6 +16,7 @@ export default function Home() {
             <ProductOverview />
             <Advantages />
             <Testimonies />
+            <Cta />
         </main>
     )
 }

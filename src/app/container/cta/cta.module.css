@@ -1,0 +1,44 @@
+.cta {
+    height: 186px;
+    margin-block-start: 8rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    margin: 0 7.5vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: fit-content;
+}
+
+.text > h1 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+.text > p {
+    color: var(--neutral-500);
+}
+
+@media (max-width: 768px) {
+    .cta {
+        height: 262px;
+    }
+    .content {
+        flex-direction: column;
+        text-align: center;
+        justify-content: flex-start;
+        gap: 18px;
+    }
+}

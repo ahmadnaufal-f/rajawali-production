@@ -25,7 +25,7 @@ export default function Footer() {
             <div className={styles.footerNavigator}>
                 <div className={styles.footerNavigatorAddress}>
                     <div className={styles.footerLogo}>
-                        <Image src="/logo-footer.svg" alt="logo" width={197} height={43} />
+                        <Image src="/default-logo.svg" alt="logo" width={197} height={64} style={{ objectFit: 'contain', objectPosition: '0 0' }} />
                     </div>
                     <div className={styles.footerNavigatorAddressGroup}>
                         <div className={styles.footerNavigatorAddressSubgroup}>

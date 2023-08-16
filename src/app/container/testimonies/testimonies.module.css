@@ -1,0 +1,50 @@
+.testimonies {
+    display: flex;
+    margin: 1.5rem 0;
+    --col: 3;
+    --width: 360px;
+}
+
+.testimoniesContainer {
+    margin: 0 auto;
+}
+
+.testimoniesWrapper {
+    display: grid;
+    grid-template-columns: repeat(var(--col), var(--width));
+    column-gap: 3rem;
+    row-gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    cursor: default;
+}
+
+.testimoniesWrapper > div:hover {
+    background: var(--primary-light);
+}
+
+.testimoniesWrapper:hover > div:not(:hover) {
+    background: var(--primary-light-desaturated);
+}
+
+@media (max-width: 1172px) {
+    .testimonies {
+        --col: 1;
+        --width: 1fr;
+    }
+
+    .testimoniesWrapper {
+        padding-inline: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonies {
+        margin: 0.75rem 0;
+    }
+
+    .testimoniesWrapper {
+        padding-inline: 1rem;
+        row-gap: 1.875rem;
+    }
+}

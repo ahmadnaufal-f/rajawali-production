@@ -1,5 +1,6 @@
 :root {
     --primary-light: #fdeae9;
+    --primary-light-desaturated: #f2ebea;
     --primary-light-hover: #fbdfde;
     --primary-light-active: #f8bdbb;
     --primary: #e72b24;
@@ -41,4 +42,5 @@
     --neutral-dark: #4f4f50;
     --neutral-dark-hover: #393939;
     --neutral-dark-active: #191919;
+    --neutral-500: #667085;
 }
