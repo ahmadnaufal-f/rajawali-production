@@ -2,7 +2,7 @@
 
 import { useLanguage } from '../../languages/language-context'
 import styles from './partners.module.css'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 export default function Partners() {
@@ -21,8 +21,6 @@ export default function Partners() {
 
     const imageWidth = 100
     const [imageMargin, setImageMargin] = useState(20)
-
-    const ref = useRef<HTMLDivElement>(document.createElement('div'))
 
     const duplicateLogoArray = [...logoArray, ...logoArray]
     const [logoArrayState, setLogoArrayState] = useState(logoArray)
@@ -58,7 +56,7 @@ export default function Partners() {
     }, [showCount])
 
     useEffect(() => {
-        // Automatically slide images every 2 seconds if less than 8 images are shown
+        // Automatically slide images every 2 seconds if less than 9 images are shown
         if (showCount < 9) {
             const slideInterval = setInterval(() => {
                 nextImage()
@@ -76,7 +74,7 @@ export default function Partners() {
         const handleResize = () => {
             setImageMargin(window.innerWidth < 768 ? 20 : 40)
             const padding = window.innerWidth < 768 ? 48 : 144
-            const maxImagesToShow = Math.floor((window.innerWidth - padding) / (imageWidth + imageMargin)) // Adjust 120 based on your image width + margin
+            const maxImagesToShow = Math.floor((window.innerWidth - padding) / (imageWidth + imageMargin))
             setShowCount(maxImagesToShow > 9 ? 9 : maxImagesToShow)
         }
 
@@ -94,7 +92,6 @@ export default function Partners() {
             <div className={styles.carouselContainer}>
                 <div className={styles.carousel}>
                     <div
-                        ref={ref}
                         className={styles.imageList}
                         style={{
                             transform: `translateX(-${currentIndex * (imageWidth + imageMargin)}px)`,

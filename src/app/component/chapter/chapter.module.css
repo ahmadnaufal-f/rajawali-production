@@ -1,6 +1,6 @@
 .section {
     width: 100%;
-    padding: 3.75rem 0;
+    padding: 4.5rem 0 2.5rem;
     display: flex;
     flex-direction: column;
 }
@@ -35,7 +35,7 @@
 
 @media (max-width: 768px) {
     .section {
-        padding: 1.75rem 1rem;
+        padding: 4rem 1rem 1.75rem;
     }
 
     .aboutUsTitle {
