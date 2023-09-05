@@ -46,7 +46,7 @@
 .testiCardFooter {
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     width: 100%;
     gap: 1.25rem;
 }
